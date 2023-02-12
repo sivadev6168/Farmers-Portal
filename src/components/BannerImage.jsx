@@ -8,7 +8,7 @@ const BannerImage = () => {
       <div className="mask" style={{backgroundColor: "rgba(0, 0, 0, 0.6)"}}>
         <div className="d-flex justify-content-center align-items-center h-100">
           <div className="text-white">
-            <h1 className="mb-3">Farmer's News</h1> 
+            <h1 className="mb-3">Farmer's Newsz</h1> 
           </div>
         </div>
       </div>
