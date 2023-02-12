@@ -1,8 +1,11 @@
 import React from 'react'
+import BannerImage from './BannerImage'
 
 const CropsDetails = () => {
   return (
-    <div>CropsDetails</div>
+    <div>
+      <BannerImage />
+    </div>
   )
 }
 

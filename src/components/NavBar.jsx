@@ -19,8 +19,8 @@ const NavBar = () => {
       <i className="fas fa-bars"></i>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <a className="navbar-brand mt-2 mt-lg-0" href="/">
-        <h4>Farmer's portal</h4>
+      <a className="navbar-brand mt-lg-0" href="/">
+        <h4 className='p-0 m-0'>Farmer's portal</h4>
       </a>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
