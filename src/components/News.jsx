@@ -34,7 +34,7 @@ const News = () => {
 <main className="my-5">
     <div className="container">
       <section className="text-center">
-        <h4 className="mb-5"><strong>Latest posts</strong></h4>
+      <h1 className='my-5'>News</h1>
         <div className="row">
           <div className="col-lg-4 col-md-12 mb-4">
             <div className="card">
