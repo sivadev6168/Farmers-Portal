@@ -3,48 +3,42 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loading from './Loading';
 
 const Nav = lazy(()=>import("./NavBar"));
+const ErrorPage = lazy(()=>import("./ErrorPage"));
+const News = lazy(()=>import("./News"));
+const Crops = lazy(()=>import("./CropsDetails"));
+const Weather = lazy(()=>import("./Weather"));
 
 
 
 
 const route = createBrowserRouter([
-    // {
-    //     path:"/",
-    //     element:<Nav />,
-    //     errorElement:<ErrorPage />,
-    //     children: [
-    //         {
-    //             index: true,
-    //             path:"/",
-    //             element:<Index />
-    //         },
-    //         {
-    //             index: true,
-    //             path:"/Shop",
-    //             element:<Shop />
-    //         },
-    //         {
-    //             path:"/Mens-clothing",
-    //             element:<MensClothing />
-    //         },
-    //         {
-    //             path:"/Jewelery",
-    //             element:<Jewelery />
-    //         },
-    //         {
-    //             path:"/Electronics",
-    //             element:<Electronics />
-    //         },
-    //         {
-    //             path:"/WomensClothings",
-    //             element:<WomensClothings />
-    //         },
-    //     ]
-    // },
+    {
+        path:"/",
+        element:<Nav />,
+        errorElement:<ErrorPage />,
+        children: [
+            {
+                index: true,
+                path:"/",
+                element:<News />
+            },
+            {
+                index: true,
+                path:"/Crops Search",
+                element:<Crops />
+            },
+            {
+              index: true,
+              path:"/Weather",
+              element:<Weather />
+          },
+            
+        ]
+    },
   ]);
   
 
-  const Route = () => {
+  const Routing = () => {
     return (
       <Suspense fallback={<Loading />}>
         <RouterProvider router={route} />
@@ -52,4 +46,4 @@ const route = createBrowserRouter([
     );
   };
   
-  export default Route;
+  export default Routing;

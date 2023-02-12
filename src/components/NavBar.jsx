@@ -1,5 +1,6 @@
 import React from 'react';
-import './css/NavBar.css'
+import './css/NavBar.css';
+import { Link, Outlet } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -18,7 +19,7 @@ const NavBar = () => {
       <i className="fas fa-bars"></i>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <a className="navbar-brand mt-2 mt-lg-0" href="#">
+      <a className="navbar-brand mt-2 mt-lg-0" href="/">
         {/* <img
           src="https://img.freepik.com/free-vector/green-pea-plant_1308-24755.jpg?w=360&t=st=1675019960~exp=1675020560~hmac=bf85b16bf895d9ac4354913724733d982fa9bf3c8f44d1dd7300c1d6b783d3e7"
           height="60"
@@ -28,14 +29,14 @@ const NavBar = () => {
         <h4>Farmer's portal</h4>
       </a>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link" href="#">Dashboard</a>
+      <li className="nav-item">
+          <a className="nav-link" href="/"> <Link to={"/"}>News</Link></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Team</a>
+          <a className="nav-link" href="/"> <Link to={"/Crops Search"}>Crops Search</Link></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Projects</a>
+          <a className="nav-link" href="/"><Link to={"/Weather"}>Weather</Link></a>
         </li>
       </ul>
     </div>
@@ -43,7 +44,7 @@ const NavBar = () => {
       <div className="dropdown">
         <a
           className="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
+          href="/"
           id="navbarDropdownMenuAvatar"
           role="button"
           data-mdb-toggle="dropdown"
@@ -69,6 +70,7 @@ const NavBar = () => {
     </div>
   </div>
 </nav>
+<Outlet />
    </>
   )
 }
