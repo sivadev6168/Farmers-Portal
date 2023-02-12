@@ -147,15 +147,6 @@ const News = () => {
       </section>
     </div>
   </main>
-  {
-    NewsData.map((newNews, i)=>(
-      <>
-      <h1>{newNews.News}</h1>
-      <img src={newNews.Imgurl} alt="img" />
-      <p>{newNews.Description}</p>
-      </>
-    ))
-  }
   </div>
   )
 }
