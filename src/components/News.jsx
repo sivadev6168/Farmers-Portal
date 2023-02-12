@@ -1,6 +1,7 @@
 import React from 'react';
 import BannerImage from './BannerImage';
 import './css/News.css';
+import NewsData from './Json/News.json'
 
 const News = () => {
   return (
@@ -146,6 +147,15 @@ const News = () => {
       </section>
     </div>
   </main>
+  {
+    NewsData.map((newNews, i)=>(
+      <>
+      <h1>{newNews.News}</h1>
+      <img src={newNews.Imgurl} alt="img" />
+      <p>{newNews.Description}</p>
+      </>
+    ))
+  }
   </div>
   )
 }
