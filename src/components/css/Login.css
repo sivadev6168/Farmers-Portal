@@ -1,0 +1,114 @@
+.main-div{
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  #c5d2e7;
+    display:  grid;
+    place-items:  center;
+    height: 100vh;
+}
+.card {
+    border-radius:  20px;
+}
+.c1 {
+    background-image:  url('https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+a {
+    margin:  0px;
+    font-size:  13px;
+    border-radius:  7px;
+    text-decoration:  none;
+    color:  black;
+}
+a:hover {
+    color:  #e0726c;
+    background-color:  #fff2f1;
+}
+.nav-link {
+    padding:  1rem 1.4rem;
+    margin:  0rem 0.7rem;
+}
+.ac {
+    font-weight:  bold;
+    color:  #e0726c;
+    font-size:  12px;
+}
+input,  button {
+    width:  96%;
+    background-color:  #fff2f1;
+    border-radius:  8px;
+    padding:  8px 17px;
+    font-size: 13px;
+    border:  1px solid #f5f0ef;
+    color:  #dccece;
+}
+
+.bt {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #000000;
+    font-size: 13px;
+    height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    min-width: 200px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+}
+
+.bt:hover{
+    background: #ffffff;
+    color: #000000 !important;
+    border: 1px solid black;
+}
+
+.bt1{
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 13px;
+    height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    min-width: 200px;
+    font-weight: 500;
+    color: #000000 !important;
+    border: none;
+    border: 1px solid black;
+}
+
+.bt1:hover{
+    background: #000000;
+    color: #ffffff !important;
+    border: 1px solid rgb(255, 255, 255);
+}
+form {
+    margin-top:  70px;
+}
+form >* {
+    margin:  10px 0px;
+}
+#forgot {
+    margin:  0px -60px;
+}
+#register {
+    text-align:  center;
+}
+img {
+    background-color:  antiquewhite;
+}
+.wlcm {
+    font-size:  30px;
+}
+.sp1 {
+    font-size:  5px;
+}
+.sp1 >span {
+    background-color:  #f0c3be;
+}
