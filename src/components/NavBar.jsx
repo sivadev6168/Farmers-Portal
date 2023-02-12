@@ -20,12 +20,6 @@ const NavBar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <a className="navbar-brand mt-2 mt-lg-0" href="/">
-        {/* <img
-          src="https://img.freepik.com/free-vector/green-pea-plant_1308-24755.jpg?w=360&t=st=1675019960~exp=1675020560~hmac=bf85b16bf895d9ac4354913724733d982fa9bf3c8f44d1dd7300c1d6b783d3e7"
-          height="60"
-          alt="MDB Logo"
-          loading="lazy"
-        /> */}
         <h4>Farmer's portal</h4>
       </a>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
