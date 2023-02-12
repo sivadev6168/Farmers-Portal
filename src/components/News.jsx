@@ -1,7 +1,7 @@
 import React from 'react';
-import './css/Crops.css';
+import './css/News.css';
 
-const Crops = () => {
+const News = () => {
   return (
         <div>
 <div className="p-5 text-center bg-image" style={{
@@ -79,4 +79,4 @@ const Crops = () => {
   )
 }
 
-export default Crops
+export default News;

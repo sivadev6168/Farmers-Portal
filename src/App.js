@@ -1,14 +1,15 @@
 
 import './App.css';
 import Signup from './components/Signup';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
 import NavBar from './components/NavBar';
-import Crops from './components/Crops';
+import News from './components/News';
+import ErrorPage from './components/ErrorPage';
+import Loading from './components/Loading';
 
 function App() {
   return (
-   <Login />
+   <Loading />
   );
 }
 
