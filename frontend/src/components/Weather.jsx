@@ -5,10 +5,8 @@ import './css/Weather.css'
 const Weather = () => {
   return (
 <div>
-  <BannerImage />
-  <center>
-    <h2 className='mt-5'>Weather</h2>
-  </center>
+  <BannerImage name={'Weather'}/>
+ 
   <section>
   <div className="container py-5">
     <div className="row d-flex justify-content-center align-items-center h-100">

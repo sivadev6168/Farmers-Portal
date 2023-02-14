@@ -7,33 +7,44 @@ const ErrorPage = lazy(()=>import("./ErrorPage"));
 const News = lazy(()=>import("./News"));
 const Crops = lazy(()=>import("./CropsDetails"));
 const Weather = lazy(()=>import("./Weather"));
+const Login = lazy(()=>import("./Login"));
+const Signup = lazy(()=>import("./Signup"));
 
 
 
 
 const route = createBrowserRouter([
     {
-        path:"/",
+        path:"/dashboard/",
         element:<Nav />,
         errorElement:<ErrorPage />,
         children: [
             {
                 index: true,
-                path:"/",
+                path:"/dashboard/news",
                 element:<News />
             },
             {
                 index: true,
-                path:"/Crops Search",
+                path:"/dashboard/crops",
                 element:<Crops />
             },
             {
               index: true,
-              path:"/Weather",
+              path:"/dashboard/weather",
               element:<Weather />
           },
             
         ]
+    },{
+      path:"/sign-up",
+      element:<Signup />,
+      errorElement:<ErrorPage />,
+    },
+    {
+      path:"/",
+      element:<Login />,
+      errorElement:<ErrorPage />,
     },
   ]);
   

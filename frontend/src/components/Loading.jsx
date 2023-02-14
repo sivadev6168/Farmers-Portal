@@ -3,26 +3,26 @@ import './css/Loading.css';
 
 const Loading = () => {
   return (
-    <div class="boxes">
-    <div class="box">
+    <div className="boxes">
+    <div className="box">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <div class="box">
+    <div className="box">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <div class="box">
+    <div className="box">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <div class="box">
+    <div className="box">
         <div></div>
         <div></div>
         <div></div>
