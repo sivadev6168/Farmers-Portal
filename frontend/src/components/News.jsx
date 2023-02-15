@@ -51,7 +51,7 @@ const News = () => {
                       data-mdb-ripple-color="light"
                     >
                       <img
-                        src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                        src={news['Img url']}
                         className="img-fluid"
                         alt="banner"
                       />
