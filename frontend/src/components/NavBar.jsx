@@ -27,7 +27,7 @@ const NavBar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <a className="navbar-brand mt-2 mt-lg-0" href="/">
-        <h4>Farmer's portal</h4>
+        <img src="https://farmingfortomorrow.ca/wp-content/uploads/2017/10/cropped-Agri-Talks-favicon-1.jpg" alt="farmer" width={"50px"} />
       </a>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
@@ -52,7 +52,7 @@ const NavBar = () => {
           aria-expanded="false"
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/512/482/482636.png?w=740&t=st=1675020057~exp=1675020657~hmac=5e72a26b86009ab8f89340d35fcff65b1b4f023d6fdc3358f152f40d9389121c"
+            src="https://cdn-icons-png.flaticon.com/512/4034/4034229.png"
             className="rounded-circle"
             height="25"
             alt="Black and White Portrait of a Man"

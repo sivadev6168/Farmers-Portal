@@ -1,0 +1,27 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+p.nav-link {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link a {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    padding: 0px 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+.nav-link a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.navbar-nav {
+    margin-left: 100px;
+}

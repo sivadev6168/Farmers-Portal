@@ -12,13 +12,10 @@ const News = () => {
   return (
     <div>
       <BannerImage name={"Farmer's News"}/>
-      <center className="my-5">
-        <h1>Farmer's Portal</h1>
-      </center>
       <section>
         <div className="container my-5">
-          <div className="row">
-            <div className="col-md-6">
+          <div className="row flex_row">
+            <div className="col-md-6 slide-right">
               <img
                 src="https://images.pexels.com/photos/2804327/pexels-photo-2804327.jpeg?auto=compress&cs=tinysrgb&w=640&h=427&dpr=1"
                 className="img-thumbnail"
@@ -26,11 +23,11 @@ const News = () => {
               />
             </div>
             <div className="col-md-6 centring">
-              <h1>
+              <h1 className="news_h1">
                 Cultivators are the most valuable citizens… they are tied to
                 their country
                 <br />
-                <p>Thomas Jefferson</p>
+                <p className="news_p">Thomas Jefferson</p>
               </h1>
             </div>
           </div>
@@ -38,10 +35,11 @@ const News = () => {
       </section>
 
       <main className="my-5">
-        <div className="container">
+      
           <section className="text-center">
-            <h1 className="my-5">News</h1>
-            <div className="row">
+            <h1 className="my-5 news_h1_1">News</h1>
+            <div className="container">
+            <div className="row flex-row_1">
               {NewsData.map((news, index) => {
                 return(
                   <div className="col-lg-4 col-md-12 mb-4" key={index}>
@@ -52,7 +50,7 @@ const News = () => {
                     >
                       <img
                         src={news['Img url']}
-                        className="img-fluid"
+                      className="card-image"
                         alt="banner"
                       />
                       <a href="#!">
@@ -63,12 +61,12 @@ const News = () => {
                       </a>
                     </div>
                     <div className="card-body">
-                      <h5 className="card-title">{news.News}</h5>
+                      <h5 className="card-title news-title">{news.News.slice(0, 34)}...</h5>
                      { news.News === open && <p className="card-text">
                         {news.Description}
                       </p>}
-                      <a onClick={() => setOpen(prev => news.News === prev ? null : news.News)} className="btn btn-primary">
-                        {news.News === open ? 'Close' : 'Read'}
+                      <a onClick={() => setOpen(prev => news.News === prev ? null : news.News)} className="news-btn mt-3">
+                        Show
                       </a>
                     </div>
                   </div>
@@ -76,8 +74,8 @@ const News = () => {
                 )
               })}
             </div>
+            </div>
           </section>
-        </div>
       </main>
     </div>
   );
