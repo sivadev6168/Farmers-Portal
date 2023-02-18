@@ -4,6 +4,7 @@ import "../components/css/search.css";
 import SelectSearch from "react-select-search";
 import { crop } from "../cropsData";
 import { HTTP } from "../axios";
+import "./css/Crops.css";
 
 const options = crop.map((arr) => {
   return { value: arr.id, name: arr["Crop name"] };
@@ -13,22 +14,22 @@ function Welcome({ cropDetails, trigerSMS }) {
   //props.currentCrop
   return (
     <section>
-      <div className="container my-5">
+      <div className="container my-5 crops-heading">
       <h5> {cropDetails["Crop name"]} </h5>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-12 flex-col">
             <img
               src={cropDetails["Img url"]}
               className="img-thumbnail"
               alt="farmer"
             />
           </div>
-          <div className="col-md-6 centring">
+          <div className="col-md-12 centring crops">
             <h5>
               {cropDetails.Description}
               <br />
             </h5>
-            <ul>
+            <ul> 
               <li>Croptype: {cropDetails.Croptype}</li>
               <li>Sowing period: {cropDetails["Sowing period"]}</li>
               <li>Harvesting period: {cropDetails["Harvesting period"]}</li>
@@ -41,11 +42,13 @@ function Welcome({ cropDetails, trigerSMS }) {
               {/* product link notcorrect */}
               {/* <li>buy: <a href={cropDetails['Product link']} target='_blank'>Click to buy crop</a></li> */}
             </ul>
-            <center>
-              <button onClick={trigerSMS} className="btn btn-primary">
+      <div className="col-lg-12">
+      <button onClick={trigerSMS} className="crops-btn">
                 Notify Farmer
               </button>
-            </center>
+      </div>
+              
+          
           </div>
         </div>
       </div>
@@ -111,7 +114,7 @@ const Crops = () => {
       {currentCrop ? (
         <Welcome cropDetails={currentCrop} trigerSMS={sendSMS} />
       ) : (
-        <center>
+        <center className="section-gap">
           <h1 className="mt-5">No Crop to display</h1>
         </center>
       )}

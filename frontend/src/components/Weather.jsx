@@ -60,7 +60,7 @@ const Weather = () => {
       <section>
         <div className="container py-5">
           <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-md-10 col-lg-8 col-xl-12">
+            <div className="col-md-6 col-lg-8 col-xl-6">
               <div
                 className="card bg-white text-white"
                 style={{ borderRadius: "40px" }}
@@ -107,12 +107,13 @@ const Weather = () => {
                   <p>({weather.weather[0].description})</p>
                   </>) : ('')}
                 </div> 
-                <Chart options={options} series={series} type="area" />;
               </div>
+            </div>
+            <div className="col-lg-6">
+            <Chart options={options} series={series} type="area" />;
             </div>
           </div>
         </div>
-        <button onClick={get30daysWeather}>test</button>
         
       </section>
       
