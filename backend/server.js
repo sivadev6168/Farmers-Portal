@@ -15,8 +15,8 @@ const app = express();
 app.use(bodyParser.json())
 
 
-const corsOptions ={
-    origin:'http://localhost:3001', 
+const corsOptions = {
+    origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -54,7 +54,7 @@ app.post('/user/login', (req, res) => {
             if(!bcrypt.compareSync(req.body.password, user.password)){
                 res.json({success: false, error: 'Password not correct'})
             }else{
-                res.json({success: true, msg: 'success login'})
+                res.json({success: true, msg: 'success login', user: {name: user.email, phone: user.number}})
             }
         }
     })
@@ -66,4 +66,4 @@ app.post('/user/login', (req, res) => {
 
 
 
-app.listen(3000,() => console.log("Server listening at port 3000"));
+app.listen(4000,() => console.log("Server listening at port 4000"));

@@ -10,6 +10,8 @@ const NavBar = () => {
   const navigate = useNavigate();
   const handleLogOut = () => navigate('/');
 
+  const currentUserName = sessionStorage.getItem("userName") || "";
+
   return (
    <>
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,7 +66,7 @@ const NavBar = () => {
           aria-labelledby="navbarDropdownMenuAvatar"
         >
           <li>
-            <a onClick={handleLogOut} className="dropdown-item" href="#">Logout</a>
+            <a onClick={handleLogOut} className="dropdown-item" href="#">Logout({currentUserName})</a>
           </li>
         </ul>
       </div>

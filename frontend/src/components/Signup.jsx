@@ -15,19 +15,19 @@ const Signup = () => {
   const handleSignup = (e) => {
     e.preventDefault();
     console.log({email, number, password})
-    // HTTP.post('http://localhost:3000/user/signin',{email, number, password})
-    // .then(function (response) {
-    //   console.log(response);
-    //   if(response.data.success){
-    //     navigate('/')
-    //   }else{
-    //     alert('unexpected error')
-    //   }
-    // })
-    // .catch(function (error) {
-    //   // handle error
-    //   console.log(error);
-    // })
+    HTTP.post('http://localhost:4000/user/signin',{email, number, password})
+    .then(function (response) {
+      console.log(response);
+      if(response.data.success){
+        navigate('/')
+      }else{
+        alert('unexpected error')
+      }
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
   }
 
   return (

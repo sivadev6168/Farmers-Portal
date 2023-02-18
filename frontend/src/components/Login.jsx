@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Login.css";
 import { useNavigate } from "react-router-dom";
 import HTTP from "../axios";
@@ -10,27 +10,33 @@ const Login = () => {
   const navigate = useNavigate();
   const handleCl = () => navigate("/sign-up");
 
+  useEffect(() => {sessionStorage.clear();} , [])
+
   const hangleLogin = (e) => {
     e.preventDefault();
     console.log({ email, password });
-    // HTTP.post('http://localhost:3000/user/login',{email, password})
-    // .then(function (response) {
-    //   console.log(response);
-    //   if(response.data.success){
-    //     navigate("/dashboard/news");
-    //   }else{
-    //     alert(response.data.error)
-    //   }
-    // })
-    // .catch(function (error) {
-    //   // handle error
-    //   console.log(error);
-    // })
-    if (email === "superuser" && password === "password") {
-      navigate("/dashboard/news");
-    } else {
-      alert("Wrong username or password");
-    }
+    if(email === '') alert('please enter user name')
+    HTTP.post('http://localhost:4000/user/login',{email, password})
+    .then(function (response) {
+      console.log(response);
+      if(response.data.success){
+        const {name, phone} = response.data?.user
+        sessionStorage.setItem('userName', name);
+        sessionStorage.setItem('userPhone', phone);
+        navigate("/dashboard/news");
+      }else{
+        alert(response.data.error)
+      }
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    // if (email === "superuser" && password === "password") {
+    //   navigate("/dashboard/news");
+    // } else {
+    //   alert("Wrong username or password");
+    // }
   };
   return (
     <div className="main-div">
