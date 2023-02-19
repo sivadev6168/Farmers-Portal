@@ -28,7 +28,7 @@ const NavBar = () => {
       <i className="fas fa-bars"></i>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <a className="navbar-brand mt-2 mt-lg-0" href="/">
+      <a className="navbar-brand mt-2 mt-lg-0" href="/dashboard/news">
         <img src="https://farmingfortomorrow.ca/wp-content/uploads/2017/10/cropped-Agri-Talks-favicon-1.jpg" alt="farmer" width={"50px"} />
       </a>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
