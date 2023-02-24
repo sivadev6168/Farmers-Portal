@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import BannerImage from "./BannerImage";
 import Chart from "react-apexcharts";
 import {HTTP} from '../axios'
-
 import "./css/Weather.css";
+import sunny from '../images/sunny.jpg'
+import rainny from '../images/rainny.png'
+import spring from '../images/spring.png'
+const winter = 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/draw1.webp'
+
+
 const api = {
   key: "f2748a2a99b415ae803ebd966ed3124b",
   base: "https://api.openweathermap.org/data/2.5/",
@@ -12,6 +17,7 @@ const api = {
 const Weather = () => {
   const [search, setSearch] = useState("kochi");
   const [weather, setWeather] = useState({});
+  const [weatherImage, setWeatherImage] = useState('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/draw1.webp')
 
   useEffect(() => {searchPressed()}, [])
 
@@ -42,17 +48,21 @@ const Weather = () => {
     if(!search) return
     HTTP.get(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
       .then((result) => {
+        if(result.data.main.temp < 15) setWeatherImage(winter)
+        if(result.data.main.temp > 15 && result.data.main.temp < 22) setWeatherImage(rainny)
+        if(result.data.main.temp > 22 && result.data.main.temp < 28) setWeatherImage(spring)
+        if(result.data.main.temp > 28) setWeatherImage(sunny)
         setWeather(result.data);
       });
   };
 
-  const get30daysWeather = () => {
-    HTTP.get(`${api.base}forecast/climate?lat=${76.3264}&lon=${9.49}&APPID=${api.key}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setWeather(result);
-      });
-  };
+  // const get30daysWeather = () => {
+  //   HTTP.get(`${api.base}forecast/climate?lat=${76.3264}&lon=${9.49}&APPID=${api.key}`)
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setWeather(result);
+  //     });
+  // };
 
   return (
     <div>
@@ -67,7 +77,7 @@ const Weather = () => {
               >
                 <div className="bg-image" style={{ borderRadius: "30px 30px 0px 0px",  }}>
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/draw1.webp"
+                    src={weatherImage}
                     className="card-img"
                     alt="weather"
                     height={500}
@@ -114,9 +124,7 @@ const Weather = () => {
             </div>
           </div>
         </div>
-        
       </section>
-      
     </div>
   );
 };

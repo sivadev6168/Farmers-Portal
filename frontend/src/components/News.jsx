@@ -2,16 +2,19 @@ import React,{useEffect, useState} from "react";
 import BannerImage from "./BannerImage";
 import "./css/News.css";
 import NewsData from "./Json/News.json";
+import CropsModal from '../components/CropsModal'
+import Button from 'react-bootstrap/Button';
 
 import axios from "axios";
 
 const News = () => {
 
-  const [open, setOpen] = useState(null)
+  const [currentNews, setCurrentNews] = useState('')
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <div>
-      <BannerImage name={"Farmer's News"}/>
+      <BannerImage name={"Farmer's News"} />
       <section>
         <div className="container my-5">
           <div className="row flex_row">
@@ -35,47 +38,59 @@ const News = () => {
       </section>
 
       <main className="my-5">
-      
-          <section className="text-center">
-            <h1 className="my-5 news_h1_1">News</h1>
-            <div className="container">
+        <section className="text-center">
+          <h1 className="my-5 news_h1_1">News</h1>
+          <div className="container">
             <div className="row flex-row_1">
               {NewsData.map((news, index) => {
-                return(
+                return (
                   <div className="col-lg-4 col-md-12 mb-4" key={index}>
-                  <div className="card">
-                    <div
-                      className="bg-image hover-overlay ripple"
-                      data-mdb-ripple-color="light"
-                    >
-                      <img
-                        src={news['Img url']}
-                      className="card-image"
-                        alt="banner"
-                      />
-                      <a href="#!">
-                        <div
-                          className="mask"
-                          style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                        ></div>
-                      </a>
-                    </div>
-                    <div className="card-body">
-                      <h5 className="card-title news-title">{news.News.slice(0, 34)}...</h5>
-                     { news.News === open && <p className="card-text">
-                        {news.Description}
-                      </p>}
-                      <a onClick={() => setOpen(prev => news.News === prev ? null : news.News)} className="news-btn mt-3">
-                        Show
-                      </a>
+                    <div className="card">
+                      <div
+                        className="bg-image hover-overlay ripple"
+                        data-mdb-ripple-color="light"
+                      >
+                        <img
+                          src={news["Img url"]}
+                          className="card-image"
+                          alt="banner"
+                        />
+                        <a href="#!">
+                          <div
+                            className="mask"
+                            style={{
+                              backgroundColor: "rgba(251, 251, 251, 0.15)",
+                            }}
+                          ></div>
+                        </a>
+                      </div>
+                      <div className="card-body">
+                        <h5 className="card-title news-title">
+                          {news.News.slice(0, 34)}...
+                        </h5>
+
+                        <Button
+                          variant="primary"
+                          onClick={() => {
+                            setModalShow(true);
+                            setCurrentNews(news);
+                          }}
+                        >
+                          Show
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                )
+                );
               })}
+              <CropsModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                news={currentNews}
+              />
             </div>
-            </div>
-          </section>
+          </div>
+        </section>
       </main>
     </div>
   );

@@ -15,7 +15,7 @@ function Welcome({ cropDetails, trigerSMS }) {
   return (
     <section>
       <div className="container my-5 crops-heading">
-      <h5> {cropDetails["Crop name"]} </h5>
+        <h5> {cropDetails["Crop name"]} </h5>
         <div className="row">
           <div className="col-md-12 flex-col">
             <img
@@ -29,7 +29,7 @@ function Welcome({ cropDetails, trigerSMS }) {
               {cropDetails.Description}
               <br />
             </h5>
-            <ul> 
+            <ul>
               <li>Croptype: {cropDetails.Croptype}</li>
               <li>Sowing period: {cropDetails["Sowing period"]}</li>
               <li>Harvesting period: {cropDetails["Harvesting period"]}</li>
@@ -42,13 +42,11 @@ function Welcome({ cropDetails, trigerSMS }) {
               {/* product link notcorrect */}
               {/* <li>buy: <a href={cropDetails['Product link']} target='_blank'>Click to buy crop</a></li> */}
             </ul>
-      <div className="col-lg-12">
-      <button onClick={trigerSMS} className="crops-btn">
-                Notify Farmer
+            <div className="col-lg-12">
+              <button onClick={trigerSMS} className="crops-btn">
+                Notify
               </button>
-      </div>
-              
-          
+            </div>
           </div>
         </div>
       </div>
@@ -58,6 +56,7 @@ function Welcome({ cropDetails, trigerSMS }) {
 
 const Crops = () => {
   const [currentCrop, setCurrentCrop] = useState(0);
+  const currentUserName = sessionStorage.getItem("userName") || "";
 
   const selectCrop = (e) => {
     let current = crop.filter((el) => el.id === e);
@@ -67,8 +66,10 @@ const Crops = () => {
 
   const currentUserPhone = sessionStorage.getItem("userPhone") || "";
 
+  //   Congratulations user name
+  // You have succesfully subscribed for the farming details of crop name from Farmer's Portal.
   const message = currentCrop
-    ? `Hi, ${currentCrop["Crop name"]} of type ${currentCrop["Croptype"]} harverting month is ${currentCrop["Harvesting month"]}, (${currentCrop["Harvesting period"]})`
+    ? `Congratulations ${currentUserName} You have succesfully subscribed for the farming details of ${currentCrop["Crop name"]} from Farmer's Portal`
     : "";
 
   const prod = {
@@ -91,10 +92,9 @@ const Crops = () => {
   };
 
   const sendSMS = () => {
-    console.log({prod, test})
     HTTP.get(" https://www.fast2sms.com/dev/bulkV2", { params: test })
       .then((res) => {
-        console.log(res);
+        alert('notification sent via sms')
       })
       .catch((e) => console.log(e));
   };
