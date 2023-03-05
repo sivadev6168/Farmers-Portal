@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './css/CropsModal.css';
 
 const CropsModal = (props) => {
   console.log(props.news);
@@ -18,10 +19,10 @@ const CropsModal = (props) => {
       </Modal.Header>
       <Modal.Body>
         <img width="100%" src={props.news["Img url"]} />
-        <p>{props.news.Description}</p>
+        <p className='modal-p'>{props.news.Description}</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button className='crops-btn-popup' onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );

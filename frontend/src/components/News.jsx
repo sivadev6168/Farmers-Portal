@@ -71,6 +71,7 @@ const News = () => {
 
                         <Button
                           variant="primary"
+                          className="news-btn"
                           onClick={() => {
                             setModalShow(true);
                             setCurrentNews(news);
