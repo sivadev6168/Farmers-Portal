@@ -13,6 +13,7 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-floating-whatsapp": "^5.0.8",
+    "react-password-checklist": "^1.4.3",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
