@@ -8,12 +8,12 @@
 }
 
 .form-holder {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .form-holder .form-content {
@@ -65,12 +65,16 @@
     margin-bottom: 30px;
 }
 
-
-.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+.form-content label,
+.was-validated .form-check-input:invalid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
     color: #fff;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+.form-content input[type=text],
+.form-content input[type=password],
+.form-content input[type=email],
+.form-content select {
     width: 100%;
     padding: 9px 20px;
     text-align: left;
@@ -80,25 +84,26 @@
     background-color: #fff;
     font-size: 15px;
     font-weight: 300;
-    color: #8D8D8D;
+    color: #000000;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-top: 16px;
 }
 
-
-.btn-primary{
+.btn-primary {
     background-color: #6C757D;
     outline: none;
     border: 0px;
-     box-shadow: none;
+    box-shadow: none;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
     background-color: #495056;
     outline: none !important;
     border: none !important;
-     box-shadow: none;
+    box-shadow: none;
 }
 
 .form-content textarea {
@@ -120,25 +125,27 @@
     margin-bottom: 14px;
 }
 
-.form-content textarea:hover, .form-content textarea:focus {
+.form-content textarea:hover,
+.form-content textarea:focus {
     border: 0;
     background-color: #ebeff8;
     color: #8D8D8D;
 }
 
-.mv-up{
+.mv-up {
     margin-top: -9px !important;
     margin-bottom: 8px !important;
 }
 
-.invalid-feedback{
+.invalid-feedback {
     color: #ff606e;
 }
 
-.valid-feedback{
-   color: #2acc80;
+.valid-feedback {
+    color: #2acc80;
 }
-.signup-btn{
+
+.signup-btn {
     display: inline-block;
     outline: 0;
     cursor: pointer;
@@ -154,28 +161,30 @@
     color: #ffffff;
     border: none;
 }
-.signup-btn:hover{
-        background: #ffffff;
-        color: #000000;
-    }
-    
-    .signup-btn1{
-        display: inline-block;
-        outline: 0;
-        cursor: pointer;
-        border-radius: 8px;
-        background: #ffffff;
-        font-size: 13px;
-        height: 40px;
-        padding: 0 15px;
-        text-align: center;
-        width: 100%;
-        min-width: 200px;
-        font-weight: 500;
-        color: #000000;
-        border: none;
-    }
-    .signup-btn1:hover{
-            background: #000000;
-            color: #ffffff;
-        }
+
+.signup-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.signup-btn1 {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 13px;
+    height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    min-width: 200px;
+    font-weight: 500;
+    color: #000000;
+    border: none;
+}
+
+.signup-btn1:hover {
+    background: #000000;
+    color: #ffffff;
+}

@@ -1,47 +1,55 @@
-.main-div{
+.main-div {
     margin-left: auto;
     margin-right: auto;
-    background-color:  #c5d2e7;
-    display:  grid;
-    place-items:  center;
+    background-color: #c5d2e7;
+    display: grid;
+    place-items: center;
     height: 100vh;
 }
+
 .card {
-    border-radius:  20px;
+    border-radius: 20px;
 }
+
 .c1 {
-    background-image:  url('https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+    background-image: url('https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
+
 a {
-    margin:  0px;
-    font-size:  13px;
-    border-radius:  7px;
-    text-decoration:  none;
-    color:  black;
-}
-a:hover {
-    color:  #e0726c;
-    background-color:  #fff2f1;
-}
-.nav-link {
-    padding:  1rem 1.4rem;
-    margin:  0rem 0.7rem;
-}
-.ac {
-    font-weight:  bold;
-    color:  #e0726c;
-    font-size:  12px;
-}
-input,  button {
-    width:  96%;
-    background-color:  #fff2f1;
-    border-radius:  8px;
-    padding:  8px 17px;
+    margin: 0px;
     font-size: 13px;
-    border:  1px solid #f5f0ef;
-    color:  #dccece;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #e0726c;
+    background-color: #fff2f1;
+}
+
+.nav-link {
+    padding: 1rem 1.4rem;
+    margin: 0rem 0.7rem;
+}
+
+.ac {
+    font-weight: bold;
+    color: #e0726c;
+    font-size: 12px;
+}
+
+input,
+button {
+    width: 96%;
+    background-color: #fff2f1;
+    border-radius: 8px;
+    padding: 8px 17px;
+    font-size: 13px;
+    border: 1px solid #f5f0ef;
+    color: #000000;
 }
 
 .bt {
@@ -60,13 +68,13 @@ input,  button {
     border: none;
 }
 
-.bt:hover{
+.bt:hover {
     background: #ffffff;
     color: #000000 !important;
     border: 1px solid black;
 }
 
-.bt1{
+.bt1 {
     display: inline-block;
     outline: 0;
     cursor: pointer;
@@ -83,32 +91,40 @@ input,  button {
     border: 1px solid black;
 }
 
-.bt1:hover{
+.bt1:hover {
     background: #000000;
     color: #ffffff !important;
     border: 1px solid rgb(255, 255, 255);
 }
+
 form {
-    margin-top:  70px;
+    margin-top: 70px;
 }
-form >* {
-    margin:  10px 0px;
+
+form>* {
+    margin: 10px 0px;
 }
+
 #forgot {
-    margin:  0px -60px;
+    margin: 0px -60px;
 }
+
 #register {
-    text-align:  center;
+    text-align: center;
 }
+
 img {
-    background-color:  antiquewhite;
+    background-color: antiquewhite;
 }
+
 .wlcm {
-    font-size:  30px;
+    font-size: 30px;
 }
+
 .sp1 {
-    font-size:  5px;
+    font-size: 5px;
 }
-.sp1 >span {
-    background-color:  #f0c3be;
+
+.sp1>span {
+    background-color: #f0c3be;
 }

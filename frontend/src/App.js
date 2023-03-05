@@ -4,12 +4,12 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 
 function App() {
-    return ( 
-        <>
-        <FloatingWhatsApp/>
+    return ( <
+        >
         <
         Routing / >
-        </>
+        <
+        />
     );
 }
 
